@@ -1,0 +1,82 @@
+There was a lot of setup to create an account on bitbucket (or github),
+populate it with our SSH key, which involved generating an SSH key, and in some
+cases installing the necessary software. But after this one-time setup, we were
+able to quickly create new repositories.
+
+Another good thing to do just once on your local machine at the terminal is
+to introduce yourself to git by telling it you name and email:
+  git config user.name "Jane Smith"
+  git config user.email "d@ucdavis.edu"
+
+
+We created a repository on the bitbucket Web site/portal via the Web menus.
+We copied the command to clone a repository from the bitbucket Clone command,
+selecting the SSH option.
+This was something like
+  git clone git@bitbucket.com:duncantl/myproject.git
+
+We executed this command in a terminal on our local machine.
+This makes a copy of the repository on your local machine.
+
+You then create new files and edit existing ones in the local folder for that repository.
+You can use any software to create the files, e.g., edit a .R file in R Studio.
+
+When you want to take a snapshot of the current state of one or more files, use
+ git add file1 file2 file3 
+to name the individual files.
+Then 
+  git commit -m "a message to describe the changes"
+
+To share these changes with others, push them to the bitbucket repository:
+
+  git push
+
+(The first time you do this, you need to use
+   git push -u origin master
+but after that, git knows that git push means to the bitbucket repository.)
+
+To get changes other people have committed, use
+
+  git pull
+
+
+Before git push, always do a git pull.
+
+
+To find out which files are modified, which are "staged" for committing, and which 
+are not tracked, you can use
+
+   git status
+
+-----------------
+
+
+
+
+Create a repository on bitbucket or github.
+
+git clone
+
+git add
+
+git status
+
+git commit -m "...."
+
+git push
+
+git pull
+
+
+Staging and commiting.
+ git add 
+ git commit
+or 
+ git commit -a
+
+Putting an ssh key on bitbucket.
+  If you don't have a key in $HOME/.ssh/id_rsa.pub, create one with ssh-keygen.
+    You can accept the default file name, omit the passphrase (just hit enter twice).
+  On OSX, use pbcopy < ~/.ssh/id_rsa.pub
+  Then go to the bitbucket settings for your account (not repository) and go to SSH Keys.
+  
