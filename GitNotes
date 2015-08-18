@@ -3,6 +3,9 @@ populate it with our SSH key, which involved generating an SSH key, and in some
 cases installing the necessary software. But after this one-time setup, we were
 able to quickly create new repositories.
 
+The page that leads you through getting the SSH key on to bitbucket.com is 
+https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git
+
 Another good thing to do just once on your local machine at the terminal is
 to introduce yourself to git by telling it you name and email:
   git config user.name "Jane Smith"
